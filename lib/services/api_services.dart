@@ -18,7 +18,6 @@ class ApiService {
       Map<String, dynamic> body = jsonDecode(response.body);
 
       List<dynamic> data = body['results'];
-      print(data);
       List<Movie> movies = data.map((movie) => Movie.fromJson(movie)).toList();
       return movies;
     } else {
